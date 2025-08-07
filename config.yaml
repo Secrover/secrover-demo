@@ -4,9 +4,9 @@ domains:
   - secrover.org
   - secrover.com
 repos:
-  - url: git@github.com:Secrover/secrover.org.git
+  - url: https://github.com/Secrover/secrover.org.git
     branch: master
     description: Main project
-  - url: git@github.com:Secrover/Secrover.git
+  - url: https://github.com/Secrover/Secrover.git
     branch: master
     description: Website
