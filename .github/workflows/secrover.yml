@@ -26,10 +26,10 @@ jobs:
       - name: Pull and run Secrover
         run: |
           docker pull secrover/secrover
-          mkdir -p output
+          mkdir -p docs
           docker run --rm \
             -v "$(pwd)/config.yaml:/app/config.yaml" \
-            -v "$(pwd)/output:/output" \
+            -v "$(pwd)/docs:/output" \
             -e CONFIG_FILE=config.yaml \
             secrover/secrover
 
@@ -37,7 +37,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add output/
+          git add docs/
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
