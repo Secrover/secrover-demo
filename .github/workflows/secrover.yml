@@ -35,7 +35,6 @@ jobs:
 
       - name: Commit output files
         run: |
-          git checkout output
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add output/
