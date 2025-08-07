@@ -13,7 +13,7 @@ This repository runs a **daily security scan** using [Secrover](https://github.c
 
 You can view the latest scan result here:
 
-👉 [output/index](output/index)
+👉 [output/index.html](output/index.html)
 
 > Note: The `output/` folder is committed to the repository daily, so you can track changes and view historical reports via Git history.
 
