@@ -10,8 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
+      GH_PAT: ${{ secrets.GH_PAT }}
       GIT_AUTHOR_NAME: ${{ vars.GIT_AUTHOR_NAME }}
-      GIT_AUTHOR_EMAIL: ${{ vars.GIT_AUTHOR_EMAIL }}
+      GIT_AUTHOR_EMAIL: ${{ vars.GIT_AUTHOR_EMAIL }}  
 
     steps:
       - name: Checkout repo
@@ -39,5 +40,5 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Daily secrover scan: $(date -u +'%Y-%m-%d %H:%M:%S')"
-            git push
+            git push "https://${GH_PAT}@github.com/${{ github.repository }}.git" HEAD:main
           fi
