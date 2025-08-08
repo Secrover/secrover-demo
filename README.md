@@ -13,7 +13,7 @@ This repository runs a **daily security scan** using [Secrover](https://github.c
 
 You can view the latest scan result here:
 
-👉 [https://secrover.github.io/secrover-demo/](https://secrover.github.io/secrover-demo/)
+👉 [https://demo.secrover.org](https://demo.secrover.org)
 
 > Note: The `docs/` folder is committed to the repository daily, so you can track changes and view historical reports via Git history.
 
