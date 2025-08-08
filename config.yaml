@@ -7,7 +7,7 @@ domains:
 repos:
   - url: https://github.com/Secrover/secrover.org.git
     branch: main
-    description: Main project
+    description: Website
   - url: https://github.com/Secrover/Secrover.git
     branch: main
-    description: Website
+    description: Main project
