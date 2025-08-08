@@ -6,7 +6,7 @@ This repository runs a **daily security scan** using [Secrover](https://github.c
 
 - Pulls and runs the `secrover/secrover` Docker container every day at 03:00 UTC.
 - Uses the local `config.yaml` and Github env vars for configuration.
-- Outputs scan results into the [`output/`](output/) folder.
+- Outputs scan results into the [`docs/`](docs/) folder.
 - Commits any updated results automatically to the repository.
 
 ## Output
