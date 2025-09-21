@@ -158,6 +158,10 @@
             color: #333;
             vertical-align: middle;
             line-height: 1.4em;
+
+            &.limit-size {
+                max-width: 400px;
+            }
         }
         #audit-info { 
             text-align: right;
@@ -397,7 +401,7 @@
                         for <strong>Secrover</strong>
                     
                 </p>
-                <p><em>Audit run on 2025-09-20 03:22:29 with <a href="https://secrover.org" target="_blank">Secrover</a> 0.1</em></p>
+                <p><em>Audit run on 2025-09-21 11:36:46 with <a href="https://secrover.org" target="_blank">Secrover</a> 0.1</em></p>
             </div>
         </div>
 
@@ -563,7 +567,7 @@
                                 Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_template()' and templates with a '.html' extension in order to prevent XSS.
                                 <br>
                                 <small>
-                                    File: secrover/report.py:14,
+                                    File: secrover/report.py:15,
                                     Severity: Moderate
                                 </small>
                             </div>
@@ -573,7 +577,7 @@
                                 Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_template()' and templates with a '.html' extension in order to prevent XSS.
                                 <br>
                                 <small>
-                                    File: secrover/report.py:25,
+                                    File: secrover/report.py:26,
                                     Severity: Moderate
                                 </small>
                             </div>
