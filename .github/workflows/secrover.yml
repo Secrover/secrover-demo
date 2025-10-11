@@ -28,9 +28,8 @@ jobs:
           docker pull secrover/secrover
           mkdir -p docs
           docker run --rm \
-            -v "$(pwd)/config.yaml:/app/config.yaml" \
+            -v "$(pwd)/config.yaml:/config.yaml" \
             -v "$(pwd)/docs:/output" \
-            -e CONFIG_FILE=config.yaml \
             secrover/secrover
 
       - name: Commit output files
