@@ -170,26 +170,18 @@
             font-size: 14px;
         }
         .badge {
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 14px;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 6px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 14px;
             background-color: #f8f9fa;
             color: #6c757d;
 
             &.badge-small {
-                padding: 4px 12px;
+                padding: 2px 6px;
                 font-size: 12px;
-                font-weight: 500;
-            }
-
-            &.badge-small {
-                padding: 2px 4px;
-                font-size: 12px;
-                font-weight: 500;
             }
 
             &.badge-success {
@@ -204,17 +196,9 @@
         }
         .severity-dots {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 12px;
             flex-wrap: wrap;
-
-            & > div {
-                display: flex;
-                gap: 12px;
-                flex-wrap: wrap;
-                align-items: center;
-                padding: 15px 0;
-            }
+            align-items: center;
         }
         .severity-dot {
             display: flex;
@@ -265,10 +249,6 @@
         }
         #global-recap {
             margin-bottom: 40px;
-
-            .severity-dots {
-                padding: 15px 20px;
-            }
         }
         .overview-container {
             display: flex;
@@ -352,6 +332,9 @@
             align-items: center;
             gap: 5px;
         }
+        .d-justify-between {
+            justify-content: space-between;
+        }
         .d-wrap {
             flex-wrap: wrap;
         }
@@ -402,7 +385,7 @@
                         for <strong>Secrover</strong>
                     
                 </p>
-                <p><em>Audit run on 2025-10-15 03:33:29 with <a href="https://secrover.org" target="_blank">Secrover</a> 0.3</em></p>
+                <p><em>Audit run on 2025-10-15 08:55:43 with <a href="https://secrover.org" target="_blank">Secrover</a> 0.4</em></p>
             </div>
         </div>
 
@@ -414,31 +397,44 @@
         </nav>
         
         
-<section id="global-recap" class="mb-0">
+<section>
     <h1>📊 Report Overview</h1>
 
     <div class="overview-container">
         
             <div class="card">
                 <h2>📦 Dependencies</h2>
-                <div class="count">2</div>
-                <div class="label">Repositories scanned</div>
+                <div class="mb-20">
+                    <div class="count">2</div>
+                    <div class="label">Repositories scanned</div>
+                </div>
+                <span class="badge badge-success">
+                    <strong>0</strong> vulnerabilities
+                </span>
             </div>
         
 
         
             <div class="card">
                 <h2>📝 Code</h2>
-                <div class="count">2</div>
-                <div class="label">Repositories scanned</div>
+                <div class="mb-20">
+                    <div class="count">2</div>
+                    <div class="label">Repositories scanned</div>
+                </div>
+
+                <span class="badge badge-error">
+                    <strong>4</strong> vulnerabilities
+                </span>
             </div>
         
 
         
             <div class="card">
                 <h2>🌐 Domains</h2>
-                <div class="count">3</div>
-                <div class="label">Domains scanned</div>
+                <div class="mb-20">
+                    <div class="count">3</div>
+                    <div class="label">Domains scanned</div>
+                </div>
             </div>
         
     </div>

@@ -170,26 +170,18 @@
             font-size: 14px;
         }
         .badge {
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 14px;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 6px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 14px;
             background-color: #f8f9fa;
             color: #6c757d;
 
             &.badge-small {
-                padding: 4px 12px;
+                padding: 2px 6px;
                 font-size: 12px;
-                font-weight: 500;
-            }
-
-            &.badge-small {
-                padding: 2px 4px;
-                font-size: 12px;
-                font-weight: 500;
             }
 
             &.badge-success {
@@ -204,17 +196,9 @@
         }
         .severity-dots {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 12px;
             flex-wrap: wrap;
-
-            & > div {
-                display: flex;
-                gap: 12px;
-                flex-wrap: wrap;
-                align-items: center;
-                padding: 15px 0;
-            }
+            align-items: center;
         }
         .severity-dot {
             display: flex;
@@ -265,10 +249,6 @@
         }
         #global-recap {
             margin-bottom: 40px;
-
-            .severity-dots {
-                padding: 15px 20px;
-            }
         }
         .overview-container {
             display: flex;
@@ -352,6 +332,9 @@
             align-items: center;
             gap: 5px;
         }
+        .d-justify-between {
+            justify-content: space-between;
+        }
         .d-wrap {
             flex-wrap: wrap;
         }
@@ -402,7 +385,7 @@
                         for <strong>Secrover</strong>
                     
                 </p>
-                <p><em>Audit run on 2025-10-15 03:32:46 with <a href="https://secrover.org" target="_blank">Secrover</a> 0.3</em></p>
+                <p><em>Audit run on 2025-10-15 08:55:05 with <a href="https://secrover.org" target="_blank">Secrover</a> 0.4</em></p>
             </div>
         </div>
 
@@ -416,51 +399,55 @@
         
     <section id="global-recap">
         <h1>📦 Dependencies Report</h1>
-        <div class="card severity-dots">
-            <div>
-                
-                <span class="severity-dot">
-                    <span class="dot dot-critical"></span>
-                    <span>
-                        <strong>0</strong> 
-                        Critical
-                    </span>
+        <div class="card">
+            <div class="d-flex d-justify-between">
+                <span class="badge badge-success">
+                    <strong>0</strong> vulnerabilities
                 </span>
-                
-                <span class="severity-dot">
-                    <span class="dot dot-high"></span>
-                    <span>
-                        <strong>0</strong> 
-                        High
+                <div class="severity-dots">
+                    
+                    <span class="severity-dot">
+                        <span class="dot dot-critical"></span>
+                        <span>
+                            <strong>0</strong> 
+                            Critical
+                        </span>
                     </span>
-                </span>
-                
-                <span class="severity-dot">
-                    <span class="dot dot-moderate"></span>
-                    <span>
-                        <strong>0</strong> 
-                        Moderate
+                    
+                    <span class="severity-dot">
+                        <span class="dot dot-high"></span>
+                        <span>
+                            <strong>0</strong> 
+                            High
+                        </span>
                     </span>
-                </span>
-                
-                <span class="severity-dot">
-                    <span class="dot dot-low"></span>
-                    <span>
-                        <strong>0</strong> 
-                        Low
+                    
+                    <span class="severity-dot">
+                        <span class="dot dot-moderate"></span>
+                        <span>
+                            <strong>0</strong> 
+                            Moderate
+                        </span>
                     </span>
-                </span>
-                
-                <span class="severity-dot">
-                    <span class="dot dot-info"></span>
-                    <span>
-                        <strong>0</strong> 
-                        Info
+                    
+                    <span class="severity-dot">
+                        <span class="dot dot-low"></span>
+                        <span>
+                            <strong>0</strong> 
+                            Low
+                        </span>
                     </span>
-                </span>
-                
+                    
+                    <span class="severity-dot">
+                        <span class="dot dot-info"></span>
+                        <span>
+                            <strong>0</strong> 
+                            Info
+                        </span>
+                    </span>
+                    
+                </div>
             </div>
-            <span><strong>0</strong> vulnerabilities</span>
         </div>
     </section>
 
@@ -473,9 +460,12 @@
                         <h3>secrover.org</h3>
                     </div>
                     <p class="project-description">Website</p>
-
-                    <div class="severity-dots mb-20">
-                        <div>
+                    
+                    <div class="d-flex d-justify-between mb-20">
+                        <span class="badge badge-success">
+                            <strong>0</strong> vulnerabilities</span> 
+                        </span>
+                        <div class="severity-dots">
                             
                             <span class="severity-dot">
                                 <span class="dot dot-critical"></span>
@@ -518,7 +508,6 @@
                             </span>
                             
                         </div>
-                        <span><strong>0</strong> vulnerabilities</span> 
                     </div>
 
                     <p><strong>📦 Impacted Packages:</strong></p>
@@ -537,9 +526,12 @@
                         <h3>Secrover</h3>
                     </div>
                     <p class="project-description">Main project</p>
-
-                    <div class="severity-dots mb-20">
-                        <div>
+                    
+                    <div class="d-flex d-justify-between mb-20">
+                        <span class="badge badge-success">
+                            <strong>0</strong> vulnerabilities</span> 
+                        </span>
+                        <div class="severity-dots">
                             
                             <span class="severity-dot">
                                 <span class="dot dot-critical"></span>
@@ -582,7 +574,6 @@
                             </span>
                             
                         </div>
-                        <span><strong>0</strong> vulnerabilities</span> 
                     </div>
 
                     <p><strong>📦 Impacted Packages:</strong></p>

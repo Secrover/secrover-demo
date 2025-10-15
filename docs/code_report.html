@@ -170,26 +170,18 @@
             font-size: 14px;
         }
         .badge {
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 14px;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 6px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-size: 14px;
             background-color: #f8f9fa;
             color: #6c757d;
 
             &.badge-small {
-                padding: 4px 12px;
+                padding: 2px 6px;
                 font-size: 12px;
-                font-weight: 500;
-            }
-
-            &.badge-small {
-                padding: 2px 4px;
-                font-size: 12px;
-                font-weight: 500;
             }
 
             &.badge-success {
@@ -204,17 +196,9 @@
         }
         .severity-dots {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 12px;
             flex-wrap: wrap;
-
-            & > div {
-                display: flex;
-                gap: 12px;
-                flex-wrap: wrap;
-                align-items: center;
-                padding: 15px 0;
-            }
+            align-items: center;
         }
         .severity-dot {
             display: flex;
@@ -265,10 +249,6 @@
         }
         #global-recap {
             margin-bottom: 40px;
-
-            .severity-dots {
-                padding: 15px 20px;
-            }
         }
         .overview-container {
             display: flex;
@@ -352,6 +332,9 @@
             align-items: center;
             gap: 5px;
         }
+        .d-justify-between {
+            justify-content: space-between;
+        }
         .d-wrap {
             flex-wrap: wrap;
         }
@@ -402,7 +385,7 @@
                         for <strong>Secrover</strong>
                     
                 </p>
-                <p><em>Audit run on 2025-10-15 03:33:14 with <a href="https://secrover.org" target="_blank">Secrover</a> 0.3</em></p>
+                <p><em>Audit run on 2025-10-15 08:55:30 with <a href="https://secrover.org" target="_blank">Secrover</a> 0.4</em></p>
             </div>
         </div>
 
@@ -416,35 +399,39 @@
         
     <section id="global-recap">
         <h1>📝 Code Report</h1>
-         <div class="card severity-dots">
-            <div>
-                
-                <span class="severity-dot">
-                    <span class="dot dot-high"></span>
-                    <span>
-                        <strong>0</strong>
-                        High
-                    </span>
+        <div class="card">
+            <div class="d-flex d-justify-between">
+                <span class="badge badge-error">
+                    <strong>4</strong> vulnerabilities
                 </span>
-                
-                <span class="severity-dot">
-                    <span class="dot dot-moderate"></span>
-                    <span>
-                        <strong>4</strong>
-                        Moderate
+                <div class="severity-dots">
+                    
+                    <span class="severity-dot">
+                        <span class="dot dot-high"></span>
+                        <span>
+                            <strong>0</strong>
+                            High
+                        </span>
                     </span>
-                </span>
-                
-                <span class="severity-dot">
-                    <span class="dot dot-low"></span>
-                    <span>
-                        <strong>0</strong>
-                        Low
+                    
+                    <span class="severity-dot">
+                        <span class="dot dot-moderate"></span>
+                        <span>
+                            <strong>4</strong>
+                            Moderate
+                        </span>
                     </span>
-                </span>
-                
+                    
+                    <span class="severity-dot">
+                        <span class="dot dot-low"></span>
+                        <span>
+                            <strong>0</strong>
+                            Low
+                        </span>
+                    </span>
+                    
+                </div>
             </div>
-            <span><strong>4</strong> vulnerabilities</span>
         </div>
     </section>
 
@@ -457,8 +444,11 @@
                 <p class="project-description">Website</p>
 
                 
-                    <div class="severity-dots mb-20">
-                        <div>
+                    <div class="d-flex d-justify-between mb-20">
+                        <span class="badge badge-success">
+                            <strong>0</strong> vulnerabilities</span> 
+                        </span>
+                        <div class="severity-dots">
                             
                             <span class="severity-dot">
                                 <span class="dot dot-high"></span>
@@ -485,7 +475,6 @@
                             </span>
                             
                         </div>
-                        <span><strong>0</strong> vulnerabilities</span>
                     </div>
 
                     <p><strong>🕵️ Findings Details:</strong></p>
@@ -504,8 +493,11 @@
                 <p class="project-description">Main project</p>
 
                 
-                    <div class="severity-dots mb-20">
-                        <div>
+                    <div class="d-flex d-justify-between mb-20">
+                        <span class="badge badge-error">
+                            <strong>4</strong> vulnerabilities</span> 
+                        </span>
+                        <div class="severity-dots">
                             
                             <span class="severity-dot">
                                 <span class="dot dot-high"></span>
@@ -532,7 +524,6 @@
                             </span>
                             
                         </div>
-                        <span><strong>4</strong> vulnerabilities</span>
                     </div>
 
                     <p><strong>🕵️ Findings Details:</strong></p>
@@ -541,27 +532,27 @@
                             
                             <div class="moderate">
                                 <strong>dockerfile.security.missing-user-entrypoint.missing-user-entrypoint</strong> —
-                                By not specifying a USER, a program in the container may run as 'root'. This is a security hazard. If an attacker can control a process running as root, they may have control over the container. Ensure that the last USER in a Dockerfile is a USER other than 'root'.
+                                By not specifying a USER, a program in the container may run as &#39;root&#39;. This is a security hazard. If an attacker can control a process running as root, they may have control over the container. Ensure that the last USER in a Dockerfile is a USER other than &#39;root&#39;.
                                 <br>
                                 <small>
-                                    File: Dockerfile:49,
+                                    File: Dockerfile:57,
                                     Severity: Moderate
                                 </small>
                             </div>
                             
                             <div class="moderate">
                                 <strong>python.lang.security.audit.insecure-transport.requests.request-with-http.request-with-http</strong> —
-                                Detected a request using 'http://'. This request will be unencrypted, and attackers could listen into traffic on the network and be able to obtain sensitive information. Use 'https://' instead.
+                                Detected a request using &#39;http://&#39;. This request will be unencrypted, and attackers could listen into traffic on the network and be able to obtain sensitive information. Use &#39;https://&#39; instead.
                                 <br>
                                 <small>
-                                    File: secrover/audits/domains.py:15,
+                                    File: secrover/audits/domains.py:32,
                                     Severity: Moderate
                                 </small>
                             </div>
                             
                             <div class="moderate">
                                 <strong>python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2</strong> —
-                                Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_template()' and templates with a '.html' extension in order to prevent XSS.
+                                Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method &#39;render_template()&#39; and templates with a &#39;.html&#39; extension in order to prevent XSS.
                                 <br>
                                 <small>
                                     File: secrover/report.py:15,
@@ -571,10 +562,10 @@
                             
                             <div class="moderate">
                                 <strong>python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2</strong> —
-                                Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_template()' and templates with a '.html' extension in order to prevent XSS.
+                                Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method &#39;render_template()&#39; and templates with a &#39;.html&#39; extension in order to prevent XSS.
                                 <br>
                                 <small>
-                                    File: secrover/report.py:26,
+                                    File: secrover/report.py:33,
                                     Severity: Moderate
                                 </small>
                             </div>
