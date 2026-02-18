@@ -291,12 +291,20 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
         }
         .project-card .project-description {
             color: #666;
             font-style: italic;
         }
         .packages-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
             background: #f8f9fa;
             border-radius: 12px;
             padding: 15px;
@@ -307,7 +315,6 @@
             color: #666;
             font-size: 14px;
             font-family: monospace;
-            margin-bottom: 4px;
             padding: 4px 8px;
             background: white;
             border-radius: 6px;
@@ -434,12 +441,12 @@
                 </p>
                 <p class="audit-info">
                     <em>
-                        Audit run on 2026-02-17 04:47 with
+                        Audit run on 2026-02-18 04:48 with
                         <span class="tooltip-link">
-                            Secrover 0.7
+                            Secrover 0.8
                             <span class="tooltip">
                                 osv-scanner: 2.1.0<br>
-                                opengrep: 1.15.1
+                                opengrep: 1.16.0
                             </span>
                         </span>
                     </em>
@@ -512,24 +519,29 @@
     <div id="repos">
         
             
-            
-                <div class="card project-card">
-                    <div class="project-header">
-                        <h3>secrover.org</h3>
-                    </div>
-                    <p class="project-description">Website</p>
-                    <p class="mb-0">No audit data available.</p>
+            <div class="card project-card">
+                <div class="project-header">
+                    <h3>secrover.org</h3>
+                    <a href="https://github.com/Secrover/secrover.org.git" target="_blank">
+                        <img id="logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MTguOTU2IiBoZWlnaHQ9IjYxOC45NTYiIHZpZXdCb3g9Ii0xMCAtNSA4MDAgODAwIiB4bWxuczp2PSJodHRwczovL3ZlY3RhLmlvL25hbm8iPjxwYXRoIGQ9Ik0zODktNXEtMjEgMC0zNiAxNWwtNzMgNzMgOTIgOTJxMTctNiAzNC0yIDE3IDQgMjkuNSAxNi41IDEyLjUgMTIuNSAxNiAyOS41IDMuNSAxNy0xLjUgMzRsODggODhxMTctNSAzNC0xLjUgMTcgMy41IDMwIDE2LjUgMTggMTggMTggNDMuNSAwIDI1LjUtMTggNDMtMTggMTcuNS00My41IDE3LjUtMjUuNSAwLTQzLjUtMTctMTMtMTQtMTYuNS0zMi0zLjUtMTggMy41LTM1bC04My04M3YyMThxOSA0IDE2IDExIDE4IDE4IDE4IDQzLjUgMCAyNS41LTE4IDQzLjUtMTggMTgtNDMuNSAxOC0yNS41IDAtNDMtMTgtMTcuNS0xOC0xNy41LTQzLjUgMC0yNS41IDE4LTQzLjUgOC04IDIwLTEzVjI4OXEtMTItNC0yMC0xMy0xNC0xMy0xNy41LTMxLjVRMzI4IDIyNiAzMzUgMjA5bC05MC05MUw1IDM1OHEtMTUgMTUtMTUgMzYuNVEtMTAgNDE2IDUgNDMxbDM0OSAzNDlxMTUgMTUgMzYuNSAxNSAyMS41IDAgMzYuNS0xNWwzNDgtMzQ4cTE1LTE1IDE1LTM2LjUgMC0yMS41LTE1LTM2LjVMNDI2IDEwUTQxMS01IDM4OS01eiIgZmlsbD0iI2Y2NGQyNiIvPjwvc3ZnPg==" alt="Git Repository">
+                    </a>
                 </div>
-            
+                <p class="project-description">Website</p>
+                
+                    <p class="mb-0">No audit data available.</p>
+                
+            </div>
         
             
-            
-                <div class="card project-card">
-                    <div class="project-header">
-                        <h3>Secrover</h3>
-                    </div>
-                    <p class="project-description">Main project</p>
-
+            <div class="card project-card">
+                <div class="project-header">
+                    <h3>Secrover</h3>
+                    <a href="https://github.com/Secrover/Secrover.git" target="_blank">
+                        <img id="logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MTguOTU2IiBoZWlnaHQ9IjYxOC45NTYiIHZpZXdCb3g9Ii0xMCAtNSA4MDAgODAwIiB4bWxuczp2PSJodHRwczovL3ZlY3RhLmlvL25hbm8iPjxwYXRoIGQ9Ik0zODktNXEtMjEgMC0zNiAxNWwtNzMgNzMgOTIgOTJxMTctNiAzNC0yIDE3IDQgMjkuNSAxNi41IDEyLjUgMTIuNSAxNiAyOS41IDMuNSAxNy0xLjUgMzRsODggODhxMTctNSAzNC0xLjUgMTcgMy41IDMwIDE2LjUgMTggMTggMTggNDMuNSAwIDI1LjUtMTggNDMtMTggMTcuNS00My41IDE3LjUtMjUuNSAwLTQzLjUtMTctMTMtMTQtMTYuNS0zMi0zLjUtMTggMy41LTM1bC04My04M3YyMThxOSA0IDE2IDExIDE4IDE4IDE4IDQzLjUgMCAyNS41LTE4IDQzLjUtMTggMTgtNDMuNSAxOC0yNS41IDAtNDMtMTgtMTcuNS0xOC0xNy41LTQzLjUgMC0yNS41IDE4LTQzLjUgOC04IDIwLTEzVjI4OXEtMTItNC0yMC0xMy0xNC0xMy0xNy41LTMxLjVRMzI4IDIyNiAzMzUgMjA5bC05MC05MUw1IDM1OHEtMTUgMTUtMTUgMzYuNVEtMTAgNDE2IDUgNDMxbDM0OSAzNDlxMTUgMTUgMzYuNSAxNSAyMS41IDAgMzYuNS0xNWwzNDgtMzQ4cTE1LTE1IDE1LTM2LjUgMC0yMS41LTE1LTM2LjVMNDI2IDEwUTQxMS01IDM4OS01eiIgZmlsbD0iI2Y2NGQyNiIvPjwvc3ZnPg==" alt="Git Repository">
+                    </a>
+                </div>
+                <p class="project-description">Main project</p>
+                
                     <div class="d-flex d-justify-between mb-20">
                         <span class="badge badge-success">
                             <strong>0</strong> vulnerabilities</span>
@@ -585,8 +597,8 @@
                             <p class="no-issues success mb-0">None - All clear!</p>
                         </div>
                     
-                </div>
-            
+                
+            </div>
         
     </div>
 

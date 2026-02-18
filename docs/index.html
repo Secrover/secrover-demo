@@ -291,12 +291,20 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
         }
         .project-card .project-description {
             color: #666;
             font-style: italic;
         }
         .packages-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
             background: #f8f9fa;
             border-radius: 12px;
             padding: 15px;
@@ -307,7 +315,6 @@
             color: #666;
             font-size: 14px;
             font-family: monospace;
-            margin-bottom: 4px;
             padding: 4px 8px;
             background: white;
             border-radius: 6px;
@@ -434,12 +441,12 @@
                 </p>
                 <p class="audit-info">
                     <em>
-                        Audit run on 2026-02-17 04:48 with
+                        Audit run on 2026-02-18 04:48 with
                         <span class="tooltip-link">
-                            Secrover 0.7
+                            Secrover 0.8
                             <span class="tooltip">
                                 osv-scanner: 2.1.0<br>
-                                opengrep: 1.15.1
+                                opengrep: 1.16.0
                             </span>
                         </span>
                     </em>
@@ -466,9 +473,9 @@
                     <div class="count">2</div>
                     <div class="label">Repositories scanned</div>
                 </div>
-                <span class="badge badge-success">
+                <a href="dependencies_report.html" class="badge badge-success">
                     <strong>0</strong> vulnerabilities
-                </span>
+                </a>
             </div>
         
 
@@ -480,9 +487,9 @@
                     <div class="label">Repositories scanned</div>
                 </div>
 
-                <span class="badge badge-error">
+                <a href="code_report.html" class="badge badge-error">
                     <strong>4</strong> vulnerabilities
-                </span>
+                </a>
             </div>
         
 
@@ -494,9 +501,9 @@
                     <div class="label">Domains scanned</div>
                 </div>
 
-                <span class="badge badge-error">
+                <a href="domains_report.html" class="badge badge-error">
                     <strong>1</strong> vulnerability
-                </span>
+                </a>
             </div>
         
     </div>
